@@ -29,7 +29,7 @@ const int MAP_GRANULARITY           = MAP_WIDTH / 16;
 const int MAP_SCALE                 = MAP_ELEVATION_MAX / 10;
 
 // Temperatures (biomes will scale to given range)
-const int MAP_TEMPERATURE_MIN       = -50;
+const int MAP_TEMPERATURE_MIN       = -30;
 const int MAP_TEMPERATURE_MAX       =  50;
 
 // How important is each factor to determine tile temperature ( 0 < .. < 1 )
@@ -57,10 +57,10 @@ const int MAP_PRECIPITATION_MAX     = 100;
 // const int PRECIPITATION_LEVEL_RANGE = MAP_PRECIPITATION_MAX / 3;
 // const int PRECIPITATION_LEVEL_LOW  = PRECIPITATION_LEVEL_RANGE;
 // const int PRECIPITATION_LEVEL_HIGH = MAP_PRECIPITATION_MAX - PRECIPITATION_LEVEL_RANGE;
-const int PRECIPITATION_LEVEL_LOW  = 20;
+const int PRECIPITATION_LEVEL_LOW  = 15;
 const int PRECIPITATION_LEVEL_HIGH = 30;
-const int TEMPERATURE_LEVEL_LOW  = 15;
-const int TEMPERATURE_LEVEL_HIGH = 55;
+const int TEMPERATURE_LEVEL_LOW  = 0;
+const int TEMPERATURE_LEVEL_HIGH = 30;
 
 
 // Minimal height for mountains

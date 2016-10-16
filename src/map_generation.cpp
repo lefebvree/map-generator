@@ -243,8 +243,8 @@ void precipitationGeneration() {
 
 					if (terrain == TERRAIN_TYPE_OCEAN) watertiles += 1;
 					else if (terrain == TERRAIN_TYPE_COAST) watertiles += 15;
-					else if (terrain == TERRAIN_TYPE_RIVER) watertiles += 25;
-					else if (terrain == TERRAIN_TYPE_LAKE) watertiles += 35;
+					else if (terrain == TERRAIN_TYPE_RIVER) watertiles += 20;
+					else if (terrain == TERRAIN_TYPE_LAKE) watertiles += 30;
 				}
 			}
 
@@ -308,7 +308,7 @@ void temperatureGeneration() {
 
 			// Factors from 0 to 1
 			float alt = (1.0 - (float)elevation / (float)maxelevation) * TEMPERATURE_ALTITUDE_SIGNIFICANCE;
-			float lat = 1.0 - (abs(y - equator) / (float)equator * TEMPERATURE_LATITUDE_SIGNIFICANCE);
+			float lat = ((1.0 - (abs(y - equator) / (float)equator)) * TEMPERATURE_LATITUDE_SIGNIFICANCE);
 
 			int temperature = (float)(alt + lat) * (float)temperaturerange + MAP_TEMPERATURE_MIN;
 
