@@ -241,10 +241,10 @@ void precipitationGeneration() {
 
 					char terrain = getTerrainType(x+i,y+j);
 
-					if (terrain == TERRAIN_TYPE_OCEAN) watertiles += 3;
-					else if (terrain == TERRAIN_TYPE_COAST) watertiles += 40;
-					else if (terrain == TERRAIN_TYPE_RIVER) watertiles += 50;
-					else if (terrain == TERRAIN_TYPE_LAKE) watertiles += 60;
+					if (terrain == TERRAIN_TYPE_OCEAN) watertiles += 1;
+					else if (terrain == TERRAIN_TYPE_COAST) watertiles += 15;
+					else if (terrain == TERRAIN_TYPE_RIVER) watertiles += 25;
+					else if (terrain == TERRAIN_TYPE_LAKE) watertiles += 35;
 				}
 			}
 

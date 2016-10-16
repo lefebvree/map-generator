@@ -178,41 +178,41 @@ void biomeImageGeneration () {
 
 			switch (biome) {
 				case BIOME_OCEAN:
-					r = 25 ; g = 118; b = 210; break;
+					r = 13 ; g = 71 ; b = 161; break; // rgb(13 ,71 ,161)
 				case BIOME_CORAL:
-					r = 33 ; g = 150; b = 243; break;
+					r = 33 ; g = 150; b = 243; break; // rgb(33 ,150,243)
 				case BIOME_GROVE:
-					r = 121; g = 134; b = 203; break;
+					r = 103; g = 58 ; b = 183; break; // rgb(103,58 ,183)
 				case BIOME_ARCTIC:
-					r = 178; g = 235; b = 242; break;
+					r = 187; g = 222; b = 251; break; // rgb(187,222,251)
 				case BIOME_SNOWMOUNTAINS:
-					r = 224; g = 242; b = 241; break;
+					r = 121; g = 85 ; b = 72 ; break; // rgb(121,85 ,72 )
 				case BIOME_SNOWPLAINS:
-					r = 250; g = 250; b = 250; break;
+					r = 161; g = 136; b = 127; break; // rgb(161,136,127)
 				case BIOME_FOREST:
-					r = 46 ; g = 125; b = 50 ; break;
+					r = 46 ; g = 125; b = 50 ; break; // rgb(46 ,125,50 )
 				case BIOME_RAINFOREST:
-					r = 27 ; g = 94 ; b = 32 ; break;
+					r = 27 ; g = 94 ; b = 32 ; break; // rgb(27 ,94 ,32 )
 				case BIOME_TAIGA:
-					r = 0  ; g = 77 ; b = 64 ; break;
+					r = 0  ; g = 77 ; b = 64 ; break; // rgb(0  ,77 ,64 )
 				case BIOME_WOODLAND:
-					r = 67 ; g = 160; b = 71 ; break;
+					r = 67 ; g = 160; b = 71 ; break; // rgb(67 ,160,71 )
 				case BIOME_PRAIRIE:
-					r = 139; g = 195; b = 74 ; break;
+					r = 139; g = 195; b = 74 ; break; // rgb(139,195,74 )
 				case BIOME_SAVANNA:
-					r = 255; g = 167; b = 38 ; break;
+					r = 255; g = 167; b = 38 ; break; // rgb(255,167,38 )
 				case BIOME_GRASSLAND :
-					r = 205; g = 220; b = 57 ; break;
+					r = 205; g = 220; b = 57 ; break; // rgb(205,220,57 )
 				case BIOME_TUNDRA:
-					r = 144; g = 164; b = 174; break;
+					r = 144; g = 164; b = 174; break; // rgb(144,164,174)
 				case BIOME_MOUNTAIN:
-					r = 120; g = 144; b = 156; break;
+					r = 120; g = 144; b = 156; break; // rgb(120,144,156)
 				case BIOME_CHAPARRAL:
-					r = 192; g = 202; b = 51 ; break;
+					r = 192; g = 202; b = 51 ; break; // rgb(192,202,51 )
 				case BIOME_MESA:
-					r = 255; g = 160; b = 0  ; break;
+					r = 255; g = 160; b = 0  ; break; // rgb(255,160,0  )
 				case BIOME_DESERT:
-					r = 255; g = 235; b = 59 ; break;
+					r = 213; g = 0  ; b = 0  ; break; // rgb(213,0,0)
 				default:
 					r = 0; g = 0; b = 0; break;
 			}

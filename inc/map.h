@@ -33,22 +33,35 @@ const int MAP_TEMPERATURE_MIN       = -50;
 const int MAP_TEMPERATURE_MAX       =  50;
 
 // How important is each factor to determine tile temperature ( 0 < .. < 1 )
-const float TEMPERATURE_ALTITUDE_SIGNIFICANCE = 0.35;
-const float TEMPERATURE_LATITUDE_SIGNIFICANCE = 0.65;
+const float TEMPERATURE_ALTITUDE_SIGNIFICANCE = 0.3;
+const float TEMPERATURE_LATITUDE_SIGNIFICANCE = 0.7;
 
 // Sea level in map elevation range
 const int MAP_SEA_LEVEL             = 130;
 // How often are rivers able to spawn
-const int MAP_RIVER_FREQUENCY       = MAP_WIDTH / 32;
+const int MAP_RIVER_FREQUENCY       = MAP_WIDTH / 16;
 // At which altitude can a source appear
-const int MAP_RIVER_MIN_ELEVATION   = 210;
+const int MAP_RIVER_MIN_ELEVATION   = 200;
 
 // Radius of the effect of water tiles
-const int MAP_RAIN_RADIUS           = MAP_WIDTH / 128;
+const int MAP_RAIN_RADIUS           = MAP_WIDTH / 64;
 // Size of blocks checking for water quantity
 const int MAP_RAIN_CHECK_RANGE      = MAP_WIDTH / 256;
 // Max value of precipitation (range: 0 - MAP_PRECIPITATION_MAX)
 const int MAP_PRECIPITATION_MAX     = 100;
+
+
+// const int TEMPARATURE_LEVEL_RANGE = (MAP_TEMPERATURE_MAX - MAP_TEMPERATURE_MIN) / 4;
+// const int TEMPERATURE_LEVEL_LOW  = MAP_TEMPERATURE_MIN + TEMPARATURE_LEVEL_RANGE;
+// const int TEMPERATURE_LEVEL_HIGH = MAP_TEMPERATURE_MAX - TEMPARATURE_LEVEL_RANGE;
+// const int PRECIPITATION_LEVEL_RANGE = MAP_PRECIPITATION_MAX / 3;
+// const int PRECIPITATION_LEVEL_LOW  = PRECIPITATION_LEVEL_RANGE;
+// const int PRECIPITATION_LEVEL_HIGH = MAP_PRECIPITATION_MAX - PRECIPITATION_LEVEL_RANGE;
+const int PRECIPITATION_LEVEL_LOW  = 20;
+const int PRECIPITATION_LEVEL_HIGH = 30;
+const int TEMPERATURE_LEVEL_LOW  = 15;
+const int TEMPERATURE_LEVEL_HIGH = 55;
+
 
 // Minimal height for mountains
 const int MAP_MOUNTAIN_HEIGHT       = 180;
@@ -119,22 +132,6 @@ const char BIOME_CORAL  = 'K';
 const char BIOME_GROVE  = 'V';
 const char BIOME_OCEAN  = 'E';
 const char BIOME_ARCTIC = 'Z';
-
-// const int TEMPARATURE_LEVEL_RANGE = (MAP_TEMPERATURE_MAX - MAP_TEMPERATURE_MIN) / 4;
-
-// const int TEMPERATURE_LEVEL_LOW  = MAP_TEMPERATURE_MIN + TEMPARATURE_LEVEL_RANGE;
-// const int TEMPERATURE_LEVEL_HIGH = MAP_TEMPERATURE_MAX - TEMPARATURE_LEVEL_RANGE;
-
-
-// const int PRECIPITATION_LEVEL_RANGE = MAP_PRECIPITATION_MAX / 3;
-
-// const int PRECIPITATION_LEVEL_LOW  = PRECIPITATION_LEVEL_RANGE;
-// const int PRECIPITATION_LEVEL_HIGH = MAP_PRECIPITATION_MAX - PRECIPITATION_LEVEL_RANGE;
-
-const int PRECIPITATION_LEVEL_LOW  = 25;
-const int PRECIPITATION_LEVEL_HIGH = 50;
-const int TEMPERATURE_LEVEL_LOW  = 25;
-const int TEMPERATURE_LEVEL_HIGH = 65;
 
 // Map access function
 

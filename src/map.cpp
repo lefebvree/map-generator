@@ -174,7 +174,7 @@ char getBiomeType (char terrain, int temperature, int precipitation, int altitud
 			}
 			// Moderate precipitation
 			else if (precipitation < PRECIPITATION_LEVEL_HIGH) {
-				return (altitude > MAP_MOUNTAIN_HEIGHT) ? BIOME_WOODLAND : BIOME_PRAIRIE;;
+				return (altitude > MAP_MOUNTAIN_HEIGHT) ? BIOME_WOODLAND : BIOME_PRAIRIE;
 			}
 			// High precipitation
 			else {
@@ -190,7 +190,7 @@ char getBiomeType (char terrain, int temperature, int precipitation, int altitud
 			}
 			// Moderate precipitation
 			else if (precipitation < PRECIPITATION_LEVEL_HIGH) {
-				return (altitude > MAP_MOUNTAIN_HEIGHT) ? BIOME_SAVANNA : BIOME_GRASSLAND ;;
+				return (altitude > MAP_MOUNTAIN_HEIGHT) ? BIOME_SAVANNA : BIOME_GRASSLAND;
 			}
 			// High precipitation
 			else {
