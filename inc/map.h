@@ -183,6 +183,10 @@ void precipitationImageGeneration ();
 void temperatureImageGeneration ();
 void biomeImageGeneration ();
 
+// Database
+
+void saveToDatabase();
+
 // Misc
 
 void consoleHeader();

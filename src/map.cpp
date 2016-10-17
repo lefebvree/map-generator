@@ -25,7 +25,9 @@ int main ( int argc, char const ** argv ) {
 
 	mapGeneration(seed);
 
-	imagesGeneration();
+	// imagesGeneration();
+
+	saveToDatabase();
 
 	return 0;
 }
