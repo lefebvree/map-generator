@@ -25,7 +25,7 @@ OBJ = $(patsubst %.cpp, %.o, $(subst $(SRC_DIR), $(OBJ_DIR), $(SRC)))
 # Compiler options
 CXX = g++
 CXXFLAGS = -Wall -Wextra -g -I $(INC_DIR)
-LDFLAGS =
+LDFLAGS = -lrethinkdb++
 
 # Excutable name
 EXEC = map

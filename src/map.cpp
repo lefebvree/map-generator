@@ -8,8 +8,8 @@ int  map_elevation     [MAP_HEIGHT * MAP_WIDTH] = { };
 int  map_temperature   [MAP_HEIGHT * MAP_WIDTH] = { };
 int  map_precipitation [MAP_HEIGHT * MAP_WIDTH] = {0};
 
-char map_terrain_type  [MAP_HEIGHT * MAP_WIDTH] = { };
-char map_biome         [MAP_HEIGHT * MAP_WIDTH] = { };
+int  map_terrain_type  [MAP_HEIGHT * MAP_WIDTH] = { };
+int  map_biome         [MAP_HEIGHT * MAP_WIDTH] = { };
 
 int main ( int argc, char const ** argv ) {
 
@@ -110,23 +110,23 @@ void setAltitude (int x, int y, int altitude) {
 
 
 // Terrain Type ( Land, Ocean, River, Lake or Coast )
-char getTerrainType(int x, int y) {
+int getTerrainType(int x, int y) {
 	return map_terrain_type[getWrappedIndex(x, y)];
 }
-void setTerrainType (int x, int y, char terrain) {
+void setTerrainType (int x, int y, int terrain) {
 	map_terrain_type[getWrappedIndex(x, y)] = terrain;
 }
 
 
 // 	Land Biomes (SNOW MOUNTAINS, SNOW PLAINS, TEMPERATE RAIN FOREST, RAIN FOREST, TAIGA, TEMPERATE FOREST, SWAMP, SAVANNA PLATEAU, SAVANNA, TUNDRA, WOODLAND, GRASSLAND, MESA, DESERT)
 // 	Aquatic Biomes (CORAL, GROVE, OCEAN, ARCTIC)
-char getBiome(int x, int y) {
+int getBiome(int x, int y) {
 	return map_biome[getWrappedIndex(x, y)];
 }
-void setBiome (int x, int y, char biome) {
+void setBiome (int x, int y, int biome) {
 	map_biome[getWrappedIndex(x, y)] = biome;
 }
-char getBiomeType (char terrain, int temperature, int precipitation, int altitude) {
+int getBiomeType (int terrain, int temperature, int precipitation, int altitude) {
 
 	if (terrain == TERRAIN_TYPE_OCEAN) {
 		int deapth = MAP_SEA_LEVEL - altitude;

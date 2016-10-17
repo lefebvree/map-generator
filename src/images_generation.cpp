@@ -175,7 +175,7 @@ void biomeImageGeneration () {
 		for (int x = 0; x < MAP_WIDTH; x++) {
 
 			int r, g, b;
-			char biome = getBiome(x, y);
+			int biome = getBiome(x, y);
 
 			switch (biome) {
 				case BIOME_OCEAN:

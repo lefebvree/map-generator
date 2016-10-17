@@ -13,10 +13,10 @@
 #include <iostream>
 
 #ifndef MAP_H
-#define MAP_H
+#define MAP_Hint
 
 // Map Tile Size
-const int MAP_WIDTH                 = 4096;
+const int MAP_WIDTH                 = 2048;
 const int MAP_HEIGHT                = MAP_WIDTH;
 
 // Minimal Trenches deapth and Maximal summit heights
@@ -44,9 +44,9 @@ const int MAP_RIVER_FREQUENCY       = MAP_WIDTH / 16;
 const int MAP_RIVER_MIN_ELEVATION   = 200;
 
 // Radius of the effect of water tiles
-const int MAP_RAIN_RADIUS           = MAP_WIDTH / 64;
+const int MAP_RAIN_RADIUS           = MAP_WIDTH / 100;
 // Size of blocks checking for water quantity
-const int MAP_RAIN_CHECK_RANGE      = MAP_WIDTH / 256;
+const int MAP_RAIN_CHECK_RANGE      = MAP_WIDTH / 512;
 // Max value of precipitation (range: 0 - MAP_PRECIPITATION_MAX)
 const int MAP_PRECIPITATION_MAX     = 100;
 
@@ -69,11 +69,11 @@ const int MAP_MOUNTAIN_HEIGHT       = 180;
 const int MAP_OCEAN_DEAPTH          = 10;
 
 
-const char TERRAIN_TYPE_LAND    = 'l';
-const char TERRAIN_TYPE_COAST   = 'c';
-const char TERRAIN_TYPE_RIVER   = 'r';
-const char TERRAIN_TYPE_LAKE    = 'k';
-const char TERRAIN_TYPE_OCEAN   = 'o';
+const int TERRAIN_TYPE_OCEAN   = 0;
+const int TERRAIN_TYPE_LAND    = 1;
+const int TERRAIN_TYPE_RIVER   = 2;
+const int TERRAIN_TYPE_COAST   = 3;
+const int TERRAIN_TYPE_LAKE    = 4;
 
 
 //                l a n d
@@ -91,30 +91,30 @@ const char TERRAIN_TYPE_OCEAN   = 'o';
 //        * .*               ++ +
 //              - t e m p +
 
-const char BIOME_SNOWMOUNTAINS       = 'M';
-const char BIOME_SNOWPLAINS          = 'S';
+const int BIOME_SNOWMOUNTAINS       = 10;
+const int BIOME_SNOWPLAINS          = 11;
 
-const char BIOME_FOREST              = 'T';
+const int BIOME_FOREST              = 20;
 
-const char BIOME_RAINFOREST          = 'R';
-
-
-const char BIOME_TAIGA               = 'I';
-
-const char BIOME_WOODLAND            = 'F';
-const char BIOME_PRAIRIE             = 'W';
-
-const char BIOME_SAVANNA             = 'P';
-const char BIOME_GRASSLAND           = 'A';
+const int BIOME_RAINFOREST          = 30;
 
 
-const char BIOME_TUNDRA              = 'U';
+const int BIOME_TAIGA               = 14;
 
-const char BIOME_MOUNTAIN            = 'O';
-const char BIOME_CHAPARRAL           = 'G';
+const int BIOME_WOODLAND            = 24;
+const int BIOME_PRAIRIE             = 25;
 
-const char BIOME_MESA                = 'C';
-const char BIOME_DESERT              = 'D';
+const int BIOME_SAVANNA             = 34;
+const int BIOME_GRASSLAND           = 35;
+
+
+const int BIOME_TUNDRA              = 18;
+
+const int BIOME_MOUNTAIN            = 28;
+const int BIOME_CHAPARRAL           = 29;
+
+const int BIOME_MESA                = 38;
+const int BIOME_DESERT              = 39;
 
 //               o c e a n
 //              B I O M E S
@@ -128,10 +128,10 @@ const char BIOME_DESERT              = 'D';
 //        * .*               ++ +
 //              - t e m p +
 
-const char BIOME_CORAL  = 'K';
-const char BIOME_GROVE  = 'V';
-const char BIOME_OCEAN  = 'E';
-const char BIOME_ARCTIC = 'Z';
+const int BIOME_OCEAN  = 0;
+const int BIOME_CORAL  = 1;
+const int BIOME_GROVE  = 2;
+const int BIOME_ARCTIC = 3;
 
 // Map access function
 
@@ -143,12 +143,12 @@ void setAltitude     (int x, int y, int altitude);
 int  getTemperature  (int x, int y);
 void setTemperature  (int x, int y, int temp);
 
-char getTerrainType  (int x, int y);
-void setTerrainType  (int x, int y, char terrain);
+int getTerrainType   (int x, int y);
+void setTerrainType  (int x, int y, int terrain);
 
-char getBiome        (int x, int y);
-void setBiome        (int x, int y, char biome);
-char getBiomeType    (char terrain, int temperature, int precipitation, int altitude);
+int getBiome         (int x, int y);
+void setBiome        (int x, int y, int biome);
+int getBiomeType     (int terrain, int temperature, int precipitation, int altitude);
 
 int  getPrecipitation     (int x, int y);
 void setPrecipitation     (int x, int y, int precipitation);

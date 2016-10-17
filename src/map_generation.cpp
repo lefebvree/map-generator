@@ -200,7 +200,7 @@ void coastlinesGeneration() {
 	for (int y = 0; y < MAP_HEIGHT; y++) {
 		for (int x = 0; x < MAP_WIDTH; x++) {
 
-			char terrain = getTerrainType(x,y);
+			int terrain = getTerrainType(x,y);
 
 			// Only check neighbor tiles if in aquatic terrain
 			if (terrain == TERRAIN_TYPE_OCEAN || terrain == TERRAIN_TYPE_RIVER) {
@@ -239,7 +239,7 @@ void precipitationGeneration() {
 			for (int i = 0; i < MAP_RAIN_CHECK_RANGE; i ++) {
 				for (int j = 0; j < MAP_RAIN_CHECK_RANGE; j ++) {
 
-					char terrain = getTerrainType(x+i,y+j);
+					int terrain = getTerrainType(x+i,y+j);
 
 					if (terrain == TERRAIN_TYPE_OCEAN) watertiles += 1;
 					else if (terrain == TERRAIN_TYPE_COAST) watertiles += 15;
@@ -328,12 +328,12 @@ void biomeGeneration() {
 	for (int y = 0; y < MAP_HEIGHT; y++) {
 		for (int x = 0; x < MAP_WIDTH; x++) {
 
-			char terrain      = getTerrainType(x, y);
+			int terrain       = getTerrainType(x, y);
 			int temperature   = getTemperature(x, y);
 			int precipitation = getPrecipitation(x, y);
-			int altitude     = getAltitude(x, y);
+			int altitude      = getAltitude(x, y);
 
-			char biome = getBiomeType(terrain, temperature, precipitation, altitude);
+			int biome = getBiomeType(terrain, temperature, precipitation, altitude);
 
 			setBiome(x, y, biome);
 		}
