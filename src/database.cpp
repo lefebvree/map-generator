@@ -1,16 +1,16 @@
 #include <memory>
 #include <cstdio>
-#include <rethinkdb.h>
+// #include <rethinkdb.h>
 
 #include "../inc/map.h"
 
 using namespace std;
 
-namespace R = RethinkDB;
+// namespace R = RethinkDB;
 
 void saveToDatabase () {
 
-	unique_ptr<R::Connection> conn = R::connect("localhost", 28015);
+	// unique_ptr<RethinkDB::Connection> conn = RethinkDB::connect("localhost", 28015);
 
 	for (int y = 0; y < MAP_HEIGHT; y++) {
 		for (int x = 0; x < MAP_WIDTH; x++) {
@@ -22,15 +22,15 @@ void saveToDatabase () {
 			char biome = getBiome(x,y);
 
 			string json =
-				"{'id': "             + to_string(getWrappedIndex(x, y)) +
+				"{ 'id': "            + to_string(getWrappedIndex(x, y)) +
 				", 'temperature' :"   + to_string(temperature) +
 				", 'altitude' :"      + to_string(altitude) +
 				", 'precipitation' :" + to_string(precipitation) +
 				", 'terrain' :"       + to_string(terrain) +
 				", 'biome' :"         + to_string(biome) +
 				"}";
-				
-			R::Cursor cursor = R::table("map").insert(json).run(*conn);
+
+			// R::Cursor cursor = R::db("kingdom").R::table("map").insert(R::json(json)).run(*conn);
 		}
 	}
 }

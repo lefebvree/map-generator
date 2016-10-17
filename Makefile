@@ -43,6 +43,7 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp $(INC)
 # Compile all
 run: all
 	./$(EXEC) $(seed)
+	images/image_compression.sh
 
 # Clean temp files
 clean:
