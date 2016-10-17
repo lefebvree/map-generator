@@ -1,3 +1,4 @@
+#include <stdio.h>
 
 #include "../inc/map.h"
 using namespace std;
