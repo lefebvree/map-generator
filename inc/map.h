@@ -16,7 +16,7 @@
 #define MAP_Hint
 
 // Map Tile Size
-const int MAP_WIDTH                 = 2048;
+const int MAP_WIDTH                 = 1024;
 const int MAP_HEIGHT                = MAP_WIDTH;
 
 // Minimal Trenches deapth and Maximal summit heights

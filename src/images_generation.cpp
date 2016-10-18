@@ -213,7 +213,7 @@ void biomeImageGeneration () {
 				case BIOME_MESA:
 					r = 255; g = 160; b = 0  ; break; // rgb(255,160,0  )
 				case BIOME_DESERT:
-					r = 213; g = 0  ; b = 0  ; break; // rgb(213,0,0)
+					r = 213; g = 0  ; b = 0  ; break; // rgb(213,0  ,0  )
 				default:
 					r = 0; g = 0; b = 0; break;
 			}

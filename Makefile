@@ -24,7 +24,7 @@ OBJ = $(patsubst %.cpp, %.o, $(subst $(SRC_DIR), $(OBJ_DIR), $(SRC)))
 
 # Compiler options
 CXX = g++
-CXXFLAGS = -Wall -Wextra -g -I $(INC_DIR)
+CXXFLAGS = -Wall -Wextra -g -I $(INC_DIR) -std=c++11
 LDFLAGS = -lrethinkdb++
 
 # Excutable name

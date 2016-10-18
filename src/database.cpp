@@ -10,6 +10,9 @@ namespace R = RethinkDB;
 
 void saveToDatabase () {
 
+	cout << " - DATABASE CONSTRUCTION" << endl;
+	cout << "    size: " << (MAP_WIDTH * MAP_HEIGHT) << " documents" << endl;
+
 	cout << "    Writting data to rethinkdb database... " << flush;
 
 	unique_ptr<RethinkDB::Connection> conn = RethinkDB::connect("localhost", 28015);
@@ -37,9 +40,9 @@ void saveToDatabase () {
 
 		R::db("kingdom").table("map").insert(R::json(json)).run(*conn);
 
-		cout << "    Writting data to rethinkdb database... (" << y << "/" << MAP_HEIGHT <<")" << flush;
+		cout << "\r    Writting data to rethinkdb database... (" << y << "/" << MAP_HEIGHT <<")" << flush;
 
 	}
 
-	cout << "\r✅  Writting data to rethinkdb database      " << endl;
+	cout << "\r✅  Writting data to rethinkdb database (" << MAP_HEIGHT << "/" << MAP_HEIGHT <<")      " << endl;
 }
