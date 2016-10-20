@@ -1,0 +1,7 @@
+#Generated images
+images/*.png
+
+#Compiles objects
+obj/*.o
+map
+
