@@ -27,7 +27,7 @@ int main ( int argc, char const ** argv ) {
 
 	imagesGeneration();
 
-	// saveToDatabase();
+	saveToDatabase();
 
 	return 0;
 }
