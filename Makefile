@@ -1,14 +1,3 @@
-#
-#    _  _     __    P  R  O  J  E  C  T       _
-#   FJ / ;    LJ    _ ___       ___ _      ___FJ      ____      _ _____
-#   J |/ (|         J '__ J     F __` L    F __  L    F __ J    J '_  _ `,
-#  |     L    FJ   | |__| |   | |--| |   | |--| |   | |--| |   | |_||_| |
-#  F L:\  L  J  L  F L  J J   F L__J J   F L__J J   F L__J J   F L LJ J J
-#  J__L \\__L J__L J__L  J__L  )-____  L J\____,__L J\______/F J__L LJ J__L
-# |__L  \L_| |__| |__L  J__| J\______/F  J____,__F  J______F  |__L LJ J__|
-# 						      J______/
-#   M a k e f i l e
-#
 
 # Directory from sources files
 
@@ -51,6 +40,3 @@ clean:
 	rm -f $(INC_DIR)/*~
 	rm -f  $(OBJ_DIR)/*.o $(OBJ_DIR)/*~
 
-# Delete all
-# mrproper: clean
-# 	rm -f $(EXEC)

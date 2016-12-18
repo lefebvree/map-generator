@@ -4,4 +4,4 @@ images/*.png
 #Compiles objects
 obj/*.o
 map
-
+*.gch
